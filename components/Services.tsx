@@ -88,9 +88,11 @@ export default function Services() {
 
   return (
     <div className="px-2 py-12">
-      <h1 className="text-4xl font-bold text-center mb-8 font-dancingScript">
-        Our Services
-      </h1>
+      <Divider style={{ borderColor: "black"}}>
+        <h1 className="text-4xl font-bold text-center font-dancingScript">
+          Our Services
+        </h1>
+      </Divider>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 w-full" data-aos="flip-right">
         {servicesData.map((item) =>  
           isMobile ? (
@@ -101,7 +103,7 @@ export default function Services() {
                 onClick={() => toggleVisibility(item.id)}
               >
                 <DownOutlined />
-                <Divider style={{ borderColor: "black" ,paddingRight:"40px"}}>
+                <Divider orientation="start" orientationMargin={2} style={{ borderColor: "black" ,paddingRight:"40px"}}>
                   <h2 className="font-cormorant text-gray-700 text-lg">
                     {item.title}
                   </h2>

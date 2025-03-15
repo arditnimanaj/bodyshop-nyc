@@ -46,9 +46,9 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center bg-gray-100">
+    <div className="flex flex-col items-center justify-center bg-gray-100 overflow-hidden">
       <div className="flex flex-col items-center py-10 justify-center w-full px-2">
-        <Divider style={{ borderColor: "cyan" }}>
+        <Divider style={{ borderColor: "black" }}>
           <h1 className="font-dancingScript text-4xl">Get in touch with us</h1>
         </Divider>
       </div>
@@ -69,14 +69,14 @@ export default function Contact() {
             <h2 className="font-cormorant text-2xl text-primary">
               {item.name}
             </h2>
-            <span className="font-catamaran text-lg font-bold text-primary">
+            <span className="font-catamaran text-lg font-bold text-primary max-w-full text-center">
               {item.value}
             </span>
           </div>
         ))}
       </div>
       <div className="w-full px-2">
-        <Divider style={{ borderColor: "blue" }}>
+      <Divider style={{ borderColor: "black" }}>
           <span className="font-dancingScript text-4xl font-bold text-primary">
             Or visit us at
           </span>

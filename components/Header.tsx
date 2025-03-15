@@ -2,12 +2,13 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Button } from "./ui/button";
-import logo from "../public/logo.svg"
+import logo from "../public/logo.svg";
 import image1 from "../public/pin-svgrepo-com.svg";
 import image2 from "../public/phone-svgrepo-com.svg";
 import image3 from "../public/mail-2-svgrepo-com.svg";
 import Image from "next/image";
-
+import { useIsMobile } from "@/hooks/use-mobile";
+import { CaretRightOutlined } from "@ant-design/icons";
 const menuComponents = [
   { id: 1, name: "Home", path: "/" },
   { id: 2, name: "About", path: "/about" },
@@ -41,74 +42,108 @@ const navInfo = [
 
 const Header = () => {
   const [sideBar, setSideBar] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
-    <div className="sticky z-50">
+    <div className="">
       <div className="flex justify-between px-4 sm:px-12 py-2  sm:py-2 bg-black text-white min-w-full ">
-        {navInfo.map((info) => (
-          <div key={info.id} className="flex text-xs md:text-sm items-center gap-2 justify-center">
-            <Image src={info.image} alt={info.name} width={30} height={30}/>
-            {info.href ? (
-              <a href={info.href} target="_blank" rel="noopener noreferrer">
-                {info.value}
-              </a>
-            ) : info.type ? (
-              <a
-                href={`${info.type === "tel" ? "tel:" : "mailto:"}${
-                  info.value
-                }`}
-              >
-                {info.value}
-              </a>
-            ) : (
-              <span>{info.value}</span>
-            )}
-          </div>
-        ))}
+        {navInfo.map((info) => {
+          if (isMobile && info.name === "Location") return null;
+          return (
+            <div
+              key={info.id}
+              className="flex text-xs font-catamaran md:text-sm items-center gap-2 justify-center"
+            >
+              <Image
+                src={info.image}
+                alt={info.name}
+                width={info.name === "Phone" ? 25 : 30}
+                height={info.name === "Phone" ? 25 : 30}
+              />
+              {info.href ? (
+                <a href={info.href} target="_blank" rel="noopener noreferrer">
+                  {info.value}
+                </a>
+              ) : info.type ? (
+                <a
+                  href={`${info.type === "tel" ? "tel:" : "mailto:"}${
+                    info.value
+                  }`}
+                >
+                  {info.value}
+                </a>
+              ) : (
+                <span>{info.value}</span>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       <div
-  className={`fixed top-0 left-0 z-20 h-full w-full bg-white shadow-lg transition-transform duration-300 ease-in-out transform ${
-    sideBar ? "translate-x-0" : "-translate-x-full"
-  } sm:hidden`}
->
-  <div className="flex flex-col items-start gap-6 p-6 w-full justify-between h-full">
-    <div className="flex flex-col gap-6 w-full flex-grow">
-      <button
-        onClick={() => setSideBar(false)}
-        className="self-end text-xl font-bold"
+        className={`fixed top-0 left-0 z-20 h-full w-full bg-white shadow-lg transition-transform duration-300 ease-in-out transform ${
+          sideBar ? "translate-x-0" : "-translate-x-full"
+        } sm:hidden`}
       >
-        ✕
-      </button>
-      <ul className="flex flex-col gap-4 items-start w-full">
-        {menuComponents.map((component) => (
-          <Link
-            key={component.id}
-            href={component.path}
-            onClick={() => setSideBar(false)}
-            className="w-full"
-          >
-            <li className="border p-2 border-black rounded-lg flex justify-between w-full hover:bg-gray-200 transition-all duration-300">
-              {component.name}
-              <span className="text-gray-600">→</span>
-            </li>
-          </Link>
-        ))}
-      </ul>
-    </div>
-    <div className="flex justify-center mb-4 mx-auto">
-      <Image src={logo} alt="logo" width={120} height={120} className="mb-0" />
-    </div>
-  </div>
-</div>
-
+        <div className="flex flex-col items-start gap-6 p-6 w-full justify-between h-full">
+          <div className="flex flex-col gap-6 w-full flex-grow">
+            <button
+              onClick={() => setSideBar(false)}
+              className="self-end text-xl font-bold"
+            >
+              ✕
+            </button>
+            <ul className="flex flex-col gap-4 items-start w-full">
+              {menuComponents.map((component) => (
+                <Link
+                  key={component.id}
+                  href={component.path}
+                  onClick={() => setSideBar(false)}
+                  className="w-full"
+                >
+                  <li className="border p-2 border-gray-500 rounded-lg flex justify-between w-full hover:bg-gray-200 transition-all duration-300 uppercase text-lg font-extrabold font-cormorant">
+                    {component.name}
+                    <CaretRightOutlined />
+                  </li>
+                </Link>
+              ))}
+            </ul>
+          </div>
+          <div className="flex justify-center mb-4 mx-auto">
+            <Image
+              src={logo}
+              alt="logo"
+              width={120}
+              height={120}
+              className="mb-0"
+            />
+          </div>
+        </div>
+      </div>
 
       <div className="flex gap-12 justify-between items-center py-8 px-8 bg-gray-100">
         <div className="inline sm:hidden">
-          <Button className="shadow-md rounded-md border-dashed border-black border-12" onClick={() => setSideBar(true)}>☰</Button>
+          <Button
+            className="bg-black text-white"
+            onClick={() => setSideBar(true)}
+          >
+            ☰
+          </Button>
         </div>
-        <Image src={logo} alt="logo" width={50} height={50} className="sm:hidden" />
-        <Image src={logo} alt="logo" width={50} height={50} className="hidden sm:flex"  />
+        <Image
+          src={logo}
+          alt="logo"
+          width={50}
+          height={50}
+          className="sm:hidden"
+        />
+        <Image
+          src={logo}
+          alt="logo"
+          width={50}
+          height={50}
+          className="hidden sm:flex"
+        />
         <ul className="gap-12 justify-end hidden sm:flex">
           {menuComponents.map((component) => (
             <li key={component.id}>

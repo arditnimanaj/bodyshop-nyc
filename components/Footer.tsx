@@ -22,13 +22,13 @@ export default function Footer() {
 
         <div className="flex flex-col sm:flex-row sm:gap-12 w-full sm:w-1/2 items-center sm:items-start gap-12">
           <div className="flex flex-col gap-4 sm:w-1/2">
-            <div className="text-center sm:text-left">
-              <h1 className="font-semibold text-lg">Location</h1>
+            <div className="text-center flex flex-col items-center sm:text-left gap-2">
+              <h1 className="font-semibold text-md sm:text-lg bg-black text-white p-2 w-fit">Location</h1>
               <span className="block">20 Charles St. New York, NY 10801</span>
             </div>
 
-            <div className="flex flex-col text-center sm:text-left">
-              <h1 className="font-semibold text-lg">Contact</h1>
+            <div className="flex flex-col text-center sm:text-left items-center gap-2">
+              <h1 className="font-semibold text-md sm:text-lg bg-black text-white w-fit px-2 py-2">Contact</h1>
               <a type="tel" href="tel:+1 (929) 219-9089">
                 +1 (929) 219-9089
               </a>
@@ -38,9 +38,9 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex sm:flex-col items-center sm:items-start gap-4 sm:w-1/2">
-            <div className="flex flex-col text-center sm:text-left">
-              <h1 className="font-semibold text-lg">Links</h1>
+          <div className="flex items-center justify-around w-full gap-4">
+            <div className="flex flex-col text-center gap-2">
+              <h1 className="font-semibold text-md sm:text-lg border bg-black text-white p-2 items-center ">Links</h1>
               <Link href="/">Home</Link>
               <Link href="/services">Services</Link>
               <Link href="/about">About Us</Link>

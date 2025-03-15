@@ -85,8 +85,8 @@ export default function Services() {
       <div className="grid grid-cols-1 gap-14 md:grid-cols-2 lg:grid-cols-3 px-10">
         {servicesData.map((item) => (
           <div key={item.id} className="flex flex-col items-center" data-aos="fade-up">
-            <Divider style={{ borderColor: "blue" }}>
-              <h2 className="font-cormorant text-2xl text-primary">
+            <Divider style={{ borderColor: "black" }}>
+              <h2 className="font-cormorant text-xl text-primary">
                 {item.title}
               </h2>
             </Divider>

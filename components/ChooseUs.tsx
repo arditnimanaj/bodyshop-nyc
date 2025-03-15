@@ -6,6 +6,7 @@ import Image from "next/image";
 import AOS from 'aos';
 import { useEffect } from "react";
 import 'aos/dist/aos.css'; // Make sure to import the AOS styles
+import { Divider } from "antd";
 const chooseUsData = [
   {
     title: "Best Quality",
@@ -45,7 +46,9 @@ export default function ChooseUs() {
 
   return (
     <div className="bg-gray-100 py-10 px-2 sm:py-22 sm:px-12 flex flex-col items-center shadow-xl">
-      <h1 className=" text-4xl font-bold font-dancingScript">Why Choose Us</h1>
+      <Divider style={{ borderColor: "black" }}>
+        <h1 className=" text-4xl font-bold font-dancingScript">Why Choose Us</h1>
+      </Divider>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-4 px-4 sm:py-10 p-2">
           {chooseUsData.map((item, index) => (

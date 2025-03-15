@@ -9,7 +9,7 @@ import logo from "../public/logo.svg"
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Hero />
       <AboutUs />
       <ChooseUs />
