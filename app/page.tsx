@@ -17,7 +17,7 @@ export default function Home() {
       <SliderComponent/>
       <FloatingWhatsApp
         accountName="Shala Body Shop"
-        phoneNumber="+1 (929) 219-9089"
+        phoneNumber="+38345317885"
         avatar={logo}
         darkMode={true}
         allowEsc={true}
