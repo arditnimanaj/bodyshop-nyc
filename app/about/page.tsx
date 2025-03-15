@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { Divider } from "antd";
 import CountUp from "react-countup";
 import AOS from "aos";
@@ -55,7 +54,6 @@ export default function About() {
          <h2 className="text-2xl font-cormorant text-white uppercase">{item.title}</h2>
          <p className="text-lg text-white font-catamaran min-h-[100px] flex-grow">{item.text}</p>
        </div>
-       
         ))}
       </div>
 

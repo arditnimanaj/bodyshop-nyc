@@ -124,7 +124,7 @@ const Header = () => {
       <div className="flex gap-12 justify-between items-center py-8 px-8 bg-gray-100">
         <div className="inline sm:hidden">
           <Button
-            className="bg-black text-white"
+            className="bg-black text-white text-xl"
             onClick={() => setSideBar(true)}
           >
             ☰
