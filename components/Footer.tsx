@@ -1,11 +1,9 @@
   "use client";
-  import { useIsMobile } from "@/hooks/use-mobile";
   import Image from "next/image";
   import Link from "next/link";
   import bmwImage from "../public/images/bmw.webp";
 
   export default function Footer() {
-    const isMobile = useIsMobile();
 
     return (
       <div className="bg-gray-100 w-full px-6 sm:px-32 flex flex-col items-center py-10">
