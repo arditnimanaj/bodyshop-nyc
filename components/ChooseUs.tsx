@@ -47,7 +47,7 @@ export default function ChooseUs() {
     <div className="bg-gray-100 py-10 px-2 sm:py-22 sm:px-12 flex flex-col items-center shadow-xl">
       <h1 className=" text-4xl font-bold font-dancingScript">Why Choose Us</h1>
       <div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-4 px-12 sm:py-10 p-2">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-4 px-4 sm:py-10 p-2">
           {chooseUsData.map((item, index) => (
             <div key={index}  data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'} className="border rounded-lg p-4 flex flex-col items-center gap-4 w-full text-center shadow-2xl">
               <Image src={item.image} alt={item.title} width={100} height={100} className="rounded-md" />

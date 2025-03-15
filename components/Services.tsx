@@ -87,22 +87,22 @@ export default function Services() {
   };
 
   return (
-    <div className="px-6 py-12">
+    <div className="px-2 py-12">
       <h1 className="text-4xl font-bold text-center mb-8 font-dancingScript">
         Our Services
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 w-full" data-aos="flip-right">
         {servicesData.map((item) =>  
           isMobile ? (
-            <div key={item.id} className="px-2 py-2">
+            <div key={item.id} className="py-2">
               <CButton
                 color="primary"
                 className="w-full flex gap-4 items-center bg-gray-100 pl-5 rounded-md shadow-md "
                 onClick={() => toggleVisibility(item.id)}
               >
                 <DownOutlined />
-                <Divider style={{ borderColor: "black" ,paddingRight:"50px"}}>
-                  <h2 className="font-cormorant text-gray-700 text-2xl">
+                <Divider style={{ borderColor: "black" ,paddingRight:"40px"}}>
+                  <h2 className="font-cormorant text-gray-700 text-lg">
                     {item.title}
                   </h2>
                 </Divider>
@@ -120,9 +120,9 @@ export default function Services() {
                           className="rounded-md"
                         />
                       </div>
-                      <div className="flex flex-col justify-between mt-4 items-center gap-4">
+                      <div className="flex flex-col justify-between mt-4 items-center gap-4 text-center">
                         <h2 className="text-2xl uppercase font-cormorant">{item.title}</h2>
-                        <p className="text-md font- text-center p-2">{item.text}</p>
+                        <p className="text-lg p-2 font-cormorant">{item.text}</p>
                       </div>
                     </CCardBody>
                   </CCard>
@@ -142,7 +142,7 @@ export default function Services() {
               </div>
               <div className="flex flex-col justify-between mt-4 items-center gap-4">
                 <h2 className="text-lg font-cormorant">{item.title}</h2>
-                <p className="mt-2 text-sm text-center">{item.text}</p>
+                <p className="mt-2 text-sm mb-4 text-center">{item.text}</p>
               </div>
             </div>
           )
@@ -151,10 +151,10 @@ export default function Services() {
 
       <div className="flex items-center justify-center mt-8">
         <Link
-          className="hover:text-blue-400 transition-all duration-300 ease-in-out border rounded-2xl p-4 bg-black text-white"
+          className="text-cyan-200 hover:text-blue-400 transition-all duration-300 ease-in-out border rounded-2xl p-4 bg-black"
           href="/services"
         >
-          View More Services
+          View our services
         </Link>
       </div>
     </div>

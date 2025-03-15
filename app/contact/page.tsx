@@ -1,35 +1,92 @@
-import Image from "next/image"
-import logo from "../../public/logo.svg"
-
+"use client";
+import Image from "next/image";
+import { Divider } from "antd";
+import logo1 from "../../public/mail-2-svgrepo-com.svg";
+import logo2 from "../../public/phone-svgrepo-com.svg";
+import logo3 from "../../public/pin-drop-svgrepo-com.svg";
+import logo4 from "../../public/user-2-svgrepo-com.svg";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+const contactData = [
+  {
+    id: 1,
+    image: logo1,
+    name: "Email",
+    value: "shalaautobody@gmail.com",
+  },
+  {
+    id: 2,
+    image: logo2,
+    name: "Phone",
+    value: "+1 (929) 219-9089",
+  },
+  {
+    id: 3,
+    image: logo3,
+    name: "Address",
+    value: "20 Charles St. New York, NY 10801",
+  },
+  {
+    id: 4,
+    image: logo4,
+    name: "Owner",
+    value: "Rinor Shala",
+  },
+];
 
 export default function Contact() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      easing: "ease-in-out",
+      once: true, 
+    });
+  }, []);
+
   return (
-    <div className="gap-20 flex flex-col items-center justify-center min-w-full">
-      <div className="flex flex-col items-center py-20 justify-center gap-16 bg-gray-300">
-         <h1>Get In Touch</h1>
+    <div className="flex flex-col items-center justify-center bg-gray-100">
+      <div className="flex flex-col items-center py-10 justify-center w-full px-2">
+        <Divider style={{ borderColor: "cyan" }}>
+          <h1 className="font-dancingScript text-4xl">Get in touch with us</h1>
+        </Divider>
       </div>
-      <div className="flex justify-center gap-20 text-center items-center">
-       <div className="flex flex-col justify-center text-center items-center">
-        <Image src={logo} alt="logo" width={50} height={50} className="mb-0" />
-        <h1>Location</h1>
-        <p>20 Charles St. New York, NY 10801</p>
-       </div>
-       <div className="flex flex-col justify-center text-center items-center">
-       <Image src={logo} alt="logo" width={50} height={50} className="mb-0" />
-        <h1>Phone</h1>
-        <p>+1 (929) 219-9089</p>
-       </div>
-       <div className="flex flex-col justify-center text-center items-center">
-       <Image src={logo} alt="logo" width={50} height={50} className="mb-0" />
-        <h1>Email</h1>
-        <p>shalaautobody@gmail.com</p>
-       </div>
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 px-8">
+        {contactData.map((item) => (
+          <div
+            key={item.id}
+            className="flex flex-col items-center max-w-full gap-4 text-center px-4 py-4 border rounded-lg shadow-md bg-white w-full"
+            data-aos={item.id % 2 === 0 ?  "fade-left":"fade-right"}
+          >
+            <Image
+              src={item.image}
+              alt={item.name}
+              width={50}
+              height={50}
+              className="rounded-md"
+            />
+            <h2 className="font-cormorant text-2xl text-primary">
+              {item.name}
+            </h2>
+            <span className="font-catamaran text-lg font-bold text-primary">
+              {item.value}
+            </span>
+          </div>
+        ))}
+      </div>
+      <div className="w-full px-2">
+        <Divider style={{ borderColor: "blue" }}>
+          <span className="font-dancingScript text-4xl font-bold text-primary">
+            Or visit us at
+          </span>
+        </Divider>
       </div>
       <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.347055929554!2d-73.7897444!3d40.908135699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28d9ec557806d%3A0xc7c63e0b06ebb2b4!2s20%20Charles%20St%2C%20New%20Rochelle%2C%20NY%2010801%2C%20USA!5e0!3m2!1sen!2s!4v1741383323820!5m2!1sen!2s"
-            className="w-full h-[500px] rounded-lg shadow-md"
-            loading="lazy"
-          ></iframe>
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.347055929554!2d-73.7897444!3d40.908135699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28d9ec557806d%3A0xc7c63e0b06ebb2b4!2s20%20Charles%20St%2C%20New%20Rochelle%2C%20NY%2010801%2C%20USA!5e0!3m2!1sen!2s!4v1741383323820!5m2!1sen!2s"
+        className="w-full h-[500px] rounded-lg shadow-md p-10"
+        loading="lazy"
+      />
     </div>
   );
 }

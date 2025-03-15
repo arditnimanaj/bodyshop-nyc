@@ -1,15 +1,14 @@
 "use client";
 import Slider from "react-infinite-logo-slider";
-import image1 from "../public/images/carlogo/audi-11.svg";
+import image1 from "../public/images/carlogo/Audi-Logo_2016.svg";
 import image2 from "../public/images/carlogo/bmw-7.svg";
-import image3 from "../public/images/carlogo/ferrari-ges.svg";
 import image4 from "../public/images/carlogo/lamborghini.svg";
 import image5 from "../public/images/carlogo/mercedes-benz-9.svg";
 import image6 from "../public/images/carlogo/toyota-7.svg";
 import image7 from "../public/images/carlogo/volkswagen-9.svg";
 import image8 from "../public/images/carlogo/tesla-pure.svg";
 import image9 from "../public/images/carlogo/porsche-2.svg";
-import image10 from "../public/images/carlogo/maserati-4.svg";
+import image10 from "../public/images/carlogo/maserati-5.svg";
 import Image from "next/image";
 
 const carLogos = [
@@ -22,11 +21,6 @@ const carLogos = [
     id: 2,
     text: "BMW",
     image: image2,
-  },
-  {
-    id: 3,
-    text: "Ferrari",
-    image: image3,
   },
   {
     id: 4,
@@ -71,7 +65,6 @@ const SliderComponent = () => {
     <Slider
       width="250px"
       duration={40}
-      pauseOnHover={true}
       blurBorders={false}
       blurBorderColor={"#fff"}
     >
