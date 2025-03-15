@@ -3,9 +3,9 @@ import image2 from "../public/images/chooseus/price-tag-svgrepo-com.svg";
 import image3 from "../public/images/chooseus/help-svgrepo-com.svg";
 import image4 from "../public/images/chooseus/garage-svgrepo-com.svg";
 import Image from "next/image";
-import AOS from 'aos';
+import AOS from "aos";
 import { useEffect } from "react";
-import 'aos/dist/aos.css'; // Make sure to import the AOS styles
+import "aos/dist/aos.css";
 import { Divider } from "antd";
 const chooseUsData = [
   {
@@ -35,26 +35,39 @@ const chooseUsData = [
 ];
 
 export default function ChooseUs() {
-
   useEffect(() => {
     AOS.init({
-      duration: 1000, // Animation duration
-      easing: 'ease-in-out', // Easing function
-      once: true, // Run the animation only once
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
     });
   }, []);
 
   return (
     <div className="bg-gray-100 py-10 px-2 sm:py-22 sm:px-12 flex flex-col items-center shadow-xl">
       <Divider style={{ borderColor: "black" }}>
-        <h1 className=" text-4xl font-bold font-dancingScript">Why Choose Us</h1>
+        <h1 className=" text-4xl font-bold font-dancingScript">
+          Why Choose Us
+        </h1>
       </Divider>
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-4 px-4 sm:py-10 p-2">
           {chooseUsData.map((item, index) => (
-            <div key={index}  data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'} className="border rounded-lg p-4 flex flex-col items-center gap-4 w-full text-center shadow-2xl">
-              <Image src={item.image} alt={item.title} width={100} height={100} className="rounded-md" />
-              <h2 className="text-lg font-semibold uppercase font-catamaran">{item.title}</h2>
+            <div
+              key={index}
+              data-aos={index % 2 === 0 ? "fade-right" : "fade-left"}
+              className="border rounded-lg p-4 flex flex-col items-center gap-4 w-full text-center shadow-2xl"
+            >
+              <Image
+                src={item.image}
+                alt={item.title}
+                width={100}
+                height={100}
+                className="rounded-md"
+              />
+              <h2 className="text-lg font-semibold uppercase font-catamaran">
+                {item.title}
+              </h2>
               <p>{item.description}</p>
             </div>
           ))}
