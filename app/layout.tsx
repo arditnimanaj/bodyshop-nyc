@@ -58,7 +58,7 @@ export default function RootLayout({
         <Header />
         <FloatingWhatsApp
           accountName="Shala Autorepair"
-          phoneNumber="+1929219-9089"
+          phoneNumber="+1 (929) 219-9089"
           darkMode={true}
           allowEsc={true}
           avatar="../images/whatsapp.png"
