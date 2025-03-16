@@ -113,15 +113,15 @@ const Header = () => {
             <Image
               src={logo}
               alt="logo"
-              width={120}
-              height={120}
+              width={300}
+              height={300}
               className="mb-0"
             />
           </div>
         </div>
       </div>
 
-      <div className="flex gap-12 justify-between items-center py-8 px-8 bg-gray-100">
+      <div className="flex gap-12 justify-between items-center max-h-[120px] px-4 bg-gray-100">
         <div className="inline sm:hidden">
           <Button
             className="bg-black text-white text-xl"
@@ -133,16 +133,17 @@ const Header = () => {
         <Image
           src={logo}
           alt="logo"
-          width={50}
-          height={50}
-          className="sm:hidden"
+          width={200} // Adjust width as needed
+          height={200} // Reduce height to control the header size
+          className="sm:hidden object-contain"
         />
+
         <Image
           src={logo}
           alt="logo"
-          width={50}
-          height={50}
-          className="hidden sm:flex"
+          width={200} // Adjust width as needed
+          height={200} // Reduce height to control the header size
+          className="hidden sm:flex object-contain"
         />
         <ul className="gap-12 justify-end hidden sm:flex">
           {menuComponents.map((component) => (

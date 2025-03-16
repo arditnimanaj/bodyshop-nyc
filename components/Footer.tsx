@@ -1,9 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import bmwImage from "../public/images/bmw.webp";
+// import bmwImage from "../public/images/bmw.webp";
 import { useIsMobile } from "@/hooks/use-mobile";
 import logo from "../public/logo.svg";
+import { Divider } from "antd";
 export default function Footer() {
   const isMobile = useIsMobile();
 
@@ -46,32 +47,19 @@ export default function Footer() {
               <Link href="/about">About Us</Link>
               <Link href="/contact">Contact Us</Link>
             </div>
-
-            <div className="flex justify-center">
-              <Image
-                src={logo}
-                alt="logo"
-                width={100}
-                height={100}
-                className="mb-0"
-              />
-            </div>
           </div>
         </div>
       </div>
 
-      <div className="relative mt-8 w-full flex flex-col items-center">
-        <div className="relative z-10">
+        <Divider>
           <Image
-            src={bmwImage}
+            src={logo}
             alt="bmw"
-            width={200}
-            height={200}
-            className="w-[150px] sm:w-[200px] h-auto grayscale-40"
+            width={300}
+            height={300}
+            className="w-[300px] sm:w-[200px] h-auto grayscale-40"
           />
-        </div>
-        <div className="w-[100%] border-t border-gray-400 -mt-6 sm:-mt-8 opacity-50"></div>
-      </div>
+          </Divider>
     </div>
   );
 }
