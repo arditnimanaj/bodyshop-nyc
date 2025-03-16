@@ -12,7 +12,6 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { usePathname } from "next/navigation";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
-import logo from "../public/user-2-svgrepo-com.svg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,13 +61,13 @@ export default function RootLayout({
       >
         <Header />
         <FloatingWhatsApp
-          accountName="Shala Body Shop"
+          accountName="Shala Autorepair"
           phoneNumber="+38345317885"
           darkMode={true}
           allowEsc={true}
           allowClickAway
-          avatar={logo}
-          chatMessage="Welcome to Shala Body Shop. How can I help you?"
+          avatar="../images/whatsapp.png"
+          chatMessage="Welcome to Shala Autorepair & Bodyshop. How can I help you?"
         />
         {children}
         {pathname !== "/contact" && <Footer />}

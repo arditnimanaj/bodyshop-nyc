@@ -8,7 +8,7 @@ import image2 from "../public/phone-svgrepo-com.svg";
 import image3 from "../public/mail-2-svgrepo-com.svg";
 import Image from "next/image";
 import { useIsMobile } from "@/hooks/use-mobile";
-import { CaretRightOutlined } from "@ant-design/icons";
+import { CaretRightOutlined, MenuOutlined } from "@ant-design/icons";
 const menuComponents = [
   { id: 1, name: "Home", path: "/" },
   { id: 2, name: "About", path: "/about" },
@@ -122,12 +122,12 @@ const Header = () => {
       </div>
 
       <div className="flex gap-12 justify-between items-center max-h-[120px] px-4 bg-gray-100">
-        <div className="inline sm:hidden">
+        <div className="inline sm:hidden text-center justify-center">
           <Button
-            className="bg-black text-white text-xl"
+            className="bg-black text-white text-2xl"
             onClick={() => setSideBar(true)}
           >
-            ☰
+            <MenuOutlined />
           </Button>
         </div>
         <Image
