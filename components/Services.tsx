@@ -5,7 +5,7 @@ import {
   CCard,
   CCardBody,
 } from "@coreui/react";
-import {DownOutlined} from "@ant-design/icons";
+import {DownOutlined,RightOutlined} from "@ant-design/icons";
 import Image from "next/image";
 import { useIsMobile } from "@/hooks/use-mobile";
 import "aos/dist/aos.css";
@@ -102,7 +102,7 @@ export default function Services() {
                 className="w-full flex gap-4 items-center bg-gray-100 pl-5 rounded-md shadow-md "
                 onClick={() => toggleVisibility(item.id)}
               >
-                <DownOutlined />
+                {item.id === visibleService ? <DownOutlined /> : <RightOutlined />}
                 <Divider orientation="start" orientationMargin={2} style={{ borderColor: "black" ,paddingRight:"40px"}}>
                   <h2 className="font-cormorant text-gray-700 text-lg">
                     {item.title}
