@@ -10,7 +10,9 @@ export default function Home() {
     <div className="overflow-hidden">
       <Hero />
       <ChooseUs />
+      <div className="shadow-2xl">
       <AboutUs />
+      </div>
       <Services />
       <SliderComponent />
     </div>

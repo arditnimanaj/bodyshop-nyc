@@ -20,10 +20,8 @@ export default function AboutUs() {
         backgroundPosition: "center",
       }}
     >
-      {/* Overlay for opacity and grayscale */}
       <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-
-      <div className="absolute rounded-lg mx-2 bg-white opacity-70 text-black px-4 sm:px-20 py-4 sm:py-4 flex flex-col items-center justify-center z-10">
+      <div className="absolute rounded-lg mx-2 sm:mx-32 bg-white opacity-70 text-black px-4 sm:px-32 py-4 sm:py-4 flex flex-col items-center justify-center z-10">
         <div className="text-center">
           <Divider orientation="center" style={{ borderColor: "black" }}>
             <h1 className="text-4xl font-bold text-black font-dancingScript">
@@ -34,7 +32,7 @@ export default function AboutUs() {
             <span className="sm:hidden">{mockAboutUs[0].shortText}</span>
             <span className="hidden sm:flex">{mockAboutUs[0].text}</span>
           </p>
-          <div className="flex items-center text-center justify-center gap-4 mt-4">
+          <div className="flex items-center text-center justify-center gap-4 mt-8">
             <Link
               href="/services"
               className="bg-black text-white px-6 py-2 rounded-lg text-md uppercase font-bold"

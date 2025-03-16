@@ -6,32 +6,38 @@ import logo2 from "../../public/phone-svgrepo-com.svg";
 import logo3 from "../../public/pin-drop-svgrepo-com.svg";
 import logo4 from "../../public/user-2-svgrepo-com.svg";
 import AOS from "aos";
+import brandLogo from "../../public/logo.svg"
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+
 const contactData = [
   {
     id: 1,
     image: logo1,
     name: "Email",
     value: "shalaautobody@gmail.com",
+    link: "mailto:shalaautobody@gmail.com",
   },
   {
     id: 2,
     image: logo2,
     name: "Phone",
     value: "+1 (929) 219-9089",
+    link: "tel:+19292199089",
   },
   {
     id: 3,
     image: logo3,
     name: "Address",
     value: "20 Charles St. New York, NY 10801",
+    link: "https://www.google.com/maps?q=20+Charles+St.+New+York,+NY+10801",
   },
   {
     id: 4,
     image: logo4,
     name: "Owner",
     value: "Rinor Shala",
+    link: "#", // No link for the owner; just display the name
   },
 ];
 
@@ -53,10 +59,13 @@ export default function Contact() {
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 py-6 px-8">
         {contactData.map((item) => (
-          <div
+          <a
             key={item.id}
+            href={item.link}
             className="flex flex-col items-center max-w-full gap-4 text-center px-4 py-4 border rounded-lg shadow-md bg-white w-full"
             data-aos={item.id % 2 === 0 ? "fade-left" : "fade-right"}
+            target={item.name === "Address" ? "_blank" : "_self"} // Open in new tab for address
+            rel="noopener noreferrer"
           >
             <Image
               src={item.image}
@@ -71,7 +80,7 @@ export default function Contact() {
             <span className="font-catamaran text-lg font-bold text-primary max-w-full text-center break-words">
               {item.value}
             </span>
-          </div>
+          </a>
         ))}
       </div>
       <div className="w-full px-2">
@@ -86,9 +95,10 @@ export default function Contact() {
         <span>Monday - Friday: 9:00 AM - 7:00 PM</span>
         <span>Saturday: 9:00 AM - 12:00 PM</span>
       </div>
+      <Image src={brandLogo} alt="logo" width={200} height={200}/>
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3015.347055929554!2d-73.7897444!3d40.908135699999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c28d9ec557806d%3A0xc7c63e0b06ebb2b4!2s20%20Charles%20St%2C%20New%20Rochelle%2C%20NY%2010801%2C%20USA!5e0!3m2!1sen!2s!4v1741383323820!5m2!1sen!2s"
-        className="w-full h-[500px] rounded-lg shadow-md p-10"
+        className="w-full h-[500px] rounded-lg shadow-md p-10 mt-[-50px]"
         loading="lazy"
       />
     </div>

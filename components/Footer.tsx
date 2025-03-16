@@ -8,7 +8,7 @@ export default function Footer() {
   const isMobile = useIsMobile();
 
   return (
-    <div className="bg-gray-100 w-full px-4 sm:px-32 flex flex-col items-center py-10">
+    <div className="bg-gray-100 w-full px-4 sm:px-32 flex flex-col items-center pt-10">
       <div className="flex flex-col sm:flex-row sm:justify-between items-center w-full gap-6 sm:gap-12">
         <div className="flex flex-col items-center sm:items-start w-full sm:w-1/2">
           <iframe
