@@ -121,7 +121,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex gap-12 justify-between items-center max-h-[120px] px-4 bg-gray-100">
+      <div className="flex gap-12 justify-between items-center max-h-[120px] pl-4 sm:px-4 bg-gray-100">
         <div className="inline sm:hidden text-center justify-center">
           <Button
             className="bg-black text-white text-2xl"
@@ -130,19 +130,20 @@ const Header = () => {
             <MenuOutlined />
           </Button>
         </div>
+        <Link href="/" className="sm:hidden">
+          <Image
+            src={logo}
+            alt="logo"
+            width={200}
+            height={200}
+            className="sm:hidden object-contain"
+          />
+        </Link>
         <Image
           src={logo}
           alt="logo"
-          width={200} // Adjust width as needed
-          height={200} // Reduce height to control the header size
-          className="sm:hidden object-contain"
-        />
-
-        <Image
-          src={logo}
-          alt="logo"
-          width={200} // Adjust width as needed
-          height={200} // Reduce height to control the header size
+          width={200}
+          height={200}
           className="hidden sm:flex object-contain"
         />
         <ul className="gap-12 justify-end hidden sm:flex">

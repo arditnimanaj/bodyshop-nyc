@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
       <video
-        className="absolute inset-0 w-full h-full object-cover opacity-70"
+        className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         loop
         muted
@@ -15,15 +15,17 @@ export default function Hero() {
         <source src="../videos/banner.mp4" type="video/mp4" />
       </video>
 
-      <div className="absolute bg-black bg-opacity-70 text-white px-6 sm:px-20 py-2 sm:py-4 flex flex-col items-center justify-center">
-        <Image
-          src={whitelogo}
-          alt="logo"
-          width={200}
-          height={120}
-          className="max-w-[200px] object-contain"
-        />
-        <div className="text-center">
+      <div className="absolute bg-black bg-opacity-70 text-white px-6 sm:px-20 py-2 sm:py-4 flex flex-col items-center justify-center z-10">
+        <div className="relative w-full flex justify-center">
+          <Image
+            src={whitelogo}
+            alt="logo"
+            width={200}
+            height={120}
+            className="object-contain max-w-[200px] h-auto"
+          />
+        </div>
+        <div className="text-center mt-[-50px]">
           <Divider orientation="center" style={{ borderColor: "white" }}>
             <h1 className="text-4xl font-bold text-white font-dancingScript">
               Shala
