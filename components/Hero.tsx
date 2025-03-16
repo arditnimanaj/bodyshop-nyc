@@ -32,7 +32,7 @@ export default function Hero() {
             </h1>
           </Divider>
           <h1 className="text-3xl font-bold uppercase font-catamaran">
-            Autorepair
+            Auto repair
           </h1>
           <h1 className="text-3xl font-bold uppercase font-catamaran">
             Bodyshop
