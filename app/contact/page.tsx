@@ -37,7 +37,7 @@ const contactData = [
     image: logo4,
     name: "Owner",
     value: "Rinor Shala",
-    link: "#", // No link for the owner; just display the name
+    link: "#",
   },
 ];
 
@@ -92,8 +92,8 @@ export default function Contact() {
       </div>
       <div className="flex flex-col items-center justify-center gap-4 border rounded-lg shadow-md bg-black text-white px-8 py-4 font-catamaran">
         <h1 className="font-bold uppercase">Opening Hours</h1>
-        <span>Monday - Friday: 9:00 AM - 7:00 PM</span>
-        <span>Saturday: 9:00 AM - 12:00 PM</span>
+        <span><strong>Monday - Friday:</strong> 9:00 AM - 7:00 PM</span>
+        <span><strong>Saturday:</strong> 9:00 AM - 12:00 PM</span>
       </div>
       <Image src={brandLogo} alt="logo" width={200} height={200}/>
       <iframe
