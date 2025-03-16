@@ -5,8 +5,7 @@ import aboutus from "../public/images/aboutusbg.png";
 const mockAboutUs = [
   {
     id: 1,
-    text: "At Shala Auto Bodyshop Repair, we are committed to delivering top-quality auto body repair and restoration services with precision, care, and expertise. With years of experience in the industry, we specialize in everything from collision repair and paint correction to frame straightening and ceramic coating. Whether it's a minor dent or a major collision, we handle every job with professionalism and attention to detail. Contact us today to schedule your appointment and get the repair of your dreams.",
-    shortText: "At Shala Auto Bodyshop Repair, we specialize in restoring a damaged vehicle to its original finish, matching colours, shades, and textures exactly, in a safe and environmentally responsible manner.",
+    text: "At Shala Auto Bodyshop Repair, we specialize in restoring damaged vehicles to their original condition with precision and expertise. Utilizing advanced techniques, we ensure an exact match of colors, shades, and textures while upholding the highest standards of quality and safety.",
   },
 ];
 
@@ -29,8 +28,7 @@ export default function AboutUs() {
             </h1>
           </Divider>
           <p className="text-md sm:text-2xl">
-            <span className="sm:hidden">{mockAboutUs[0].shortText}</span>
-            <span className="hidden sm:flex">{mockAboutUs[0].text}</span>
+            <span>{mockAboutUs[0].text}</span>
           </p>
           <div className="flex items-center text-center justify-center gap-4 mt-8">
             <Link

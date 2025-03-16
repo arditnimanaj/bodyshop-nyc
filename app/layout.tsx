@@ -57,12 +57,12 @@ export default function RootLayout({
       >
         <Header />
         <FloatingWhatsApp
-          accountName="Shala Autorepair"
+          accountName="SHALA AutoRepair"
           phoneNumber="+19292199089"
           darkMode={true}
           allowEsc={true}
           avatar="../images/whatsapp.png"
-          chatMessage="Welcome to Shala Autorepair & Bodyshop. How can I help you?"
+          chatMessage="Welcome to SHALA AutoBody Repair. How can I help you?"
         />
         {children}
         {pathname !== "/contact" && <Footer />}
