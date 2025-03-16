@@ -25,15 +25,12 @@ export default function Footer() {
               Contact
             </h2>
             <p className="text-md mt-2">20 Charles St, New York, NY 10801</p>
-            <a
-              href="tel:+19292199089"
-              className="block text-blue-600 hover:underline "
-            >
+            <a href="tel:+19292199089" className="block  hover:underline ">
               +1 (929) 219-9089
             </a>
             <a
               href="mailto:shalaautobody@gmail.com"
-              className="block text-blue-600 hover:underline"
+              className="block  hover:underline"
             >
               shalaautobody@gmail.com
             </a>
@@ -45,25 +42,22 @@ export default function Footer() {
             </h2>
             <ul className="mt-2 space-y-1">
               <li>
-                <Link href="/" className="text-blue-600 hover:underline">
+                <Link href="/" className=" hover:underline">
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/services"
-                  className="text-blue-600 hover:underline"
-                >
+                <Link href="/services" className=" hover:underline">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-blue-600 hover:underline">
+                <Link href="/about" className=" hover:underline">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-blue-600 hover:underline">
+                <Link href="/contact" className=" hover:underline">
                   Contact Us
                 </Link>
               </li>

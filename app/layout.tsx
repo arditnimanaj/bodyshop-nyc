@@ -61,7 +61,6 @@ export default function RootLayout({
           phoneNumber="+1929219-9089"
           darkMode={true}
           allowEsc={true}
-          allowClickAway
           avatar="../images/whatsapp.png"
           chatMessage="Welcome to Shala Autorepair & Bodyshop. How can I help you?"
         />
