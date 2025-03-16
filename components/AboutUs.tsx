@@ -1,5 +1,6 @@
 import { Divider } from "antd";
 import Link from "next/link";
+import aboutus from "../public/images/aboutusbg.png";
 
 const mockAboutUs = [
   {
@@ -11,34 +12,42 @@ const mockAboutUs = [
 
 export default function AboutUs() {
   return (
-    <div className="bg-black px-2 py-10 sm:py-32 sm:px-32">
-      <div className="container mx-auto flex flex-col items-center justify-center gap-8">
-        <Divider
-          orientation="center"
-          style={{ borderColor: "white", margin: "0px" }}
-        >
-          <h1 className="text-4xl font-bold text-white font-dancingScript">
-            About Us
-          </h1>
-        </Divider>
-        <p className="text-center text-white sm:text-lg">
-          {/** Render short text for smaller screens */}
-          <span className="sm:hidden">{mockAboutUs[0].shortText}</span>
-          <span className="hidden sm:flex">{mockAboutUs[0].text}</span>
-        </p>
-        <div className="flex items-center text-center justify-center gap-4">
-          <Link
-            href="/services"
-            className="bg-white text-black px-8 py-2 rounded-lg uppercase font-bold"
-          >
-            Our Services
-          </Link>
-          <Link
-            href="/contact"
-            className="bg-white text-black px-8 py-2 rounded-lg uppercase font-bold"
-          >
-            Contact Us
-          </Link>
+    <div
+      className="relative w-full h-[600px] flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url(${aboutus.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      {/* Overlay for opacity and grayscale */}
+      <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
+
+      <div className="absolute rounded-lg mx-2 bg-white opacity-70 text-black px-4 sm:px-20 py-4 sm:py-4 flex flex-col items-center justify-center z-10">
+        <div className="text-center">
+          <Divider orientation="center" style={{ borderColor: "black" }}>
+            <h1 className="text-4xl font-bold text-black font-dancingScript">
+              About Us
+            </h1>
+          </Divider>
+          <p className="text-md sm:text-2xl">
+            <span className="sm:hidden">{mockAboutUs[0].shortText}</span>
+            <span className="hidden sm:flex">{mockAboutUs[0].text}</span>
+          </p>
+          <div className="flex items-center text-center justify-center gap-4 mt-4">
+            <Link
+              href="/services"
+              className="bg-black text-white px-6 py-2 rounded-lg text-md uppercase font-bold"
+            >
+              Our Services
+            </Link>
+            <Link
+              href="/contact"
+              className="bg-black text-white px-8 py-2 rounded-lg text-md uppercase font-bold"
+            >
+              Contact Us
+            </Link>
+          </div>
         </div>
       </div>
     </div>

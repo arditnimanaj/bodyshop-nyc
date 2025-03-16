@@ -4,7 +4,7 @@ import { Divider } from "antd";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-[500px] flex items-center justify-center overflow-hidden">
+    <div className="relative w-full h-[600px] flex items-center justify-center overflow-hidden">
       <video
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
@@ -37,7 +37,7 @@ export default function Hero() {
           <h1 className="text-3xl font-bold uppercase font-catamaran">
             Bodyshop
           </h1>
-          <p className="text-lg mt-2 font-dancingScript">
+          <p className="text-xl sm:text-2xl sm:mt-2 font-dancingScript">
             Quality repairs, exceptional service.
           </p>
         </div>

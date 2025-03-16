@@ -9,8 +9,8 @@ export default function Home() {
   return (
     <div className="overflow-hidden">
       <Hero />
-      <AboutUs />
       <ChooseUs />
+      <AboutUs />
       <Services />
       <SliderComponent />
     </div>
