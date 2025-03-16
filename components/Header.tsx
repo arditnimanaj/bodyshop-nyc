@@ -20,7 +20,7 @@ const navInfo = [
   {
     id: 1,
     name: "Location",
-    value: "20 Charles St. New York, NY 10801",
+    value: "20 Charles St. New Rochelle, NY 10801",
     href: "https://www.google.com/maps/place/20+Charles+St+New+York,+NY+10801/@40.908135699999995,-73.7897444,17.78z/data=!3m1!4b1!4m5!3m4!1s0x89c28d9ec557806d:0xc7c63e0b06ebb2b4!8m2!3d40.9081357!4d-73.7897444",
     image: image1,
   },
