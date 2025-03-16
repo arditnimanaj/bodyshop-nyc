@@ -13,20 +13,20 @@ const mockAboutSatisfied = [
   {
     id: 1,
     title: "Years of Experience",
-    value: 5,
-    text: "Over 5 years of experience in the automotive industry, we have a proven track record of delivering top-quality repairs and restorations to our customers.",
+    value: 30,
+    text: "Over 30 years of experience in the automotive industry, we have a proven track record of delivering top-quality repairs and restorations to our customers.",
   },
   {
     id: 2,
     title: "Satisfied Customers",
-    value: 200,
-    text: "More than 300 satisfied customers have left us with their vehicles in perfect condition, thanks to our dedication and commitment to quality.",
+    value: 400,
+    text: "More than 400 satisfied customers have left us with their vehicles in perfect condition, thanks to our dedication and commitment to quality.",
   },
   {
     id: 3,
     title: "Projects Completed",
-    value: 300,
-    text: "We have completed over 300 projects for our customers, ensuring that every vehicle is restored to its original condition and functionality.",
+    value: 500,
+    text: "We have completed over 500 projects for our customers, ensuring that every vehicle is restored to its original condition and functionality.",
   },
 ];
 

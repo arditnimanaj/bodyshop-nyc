@@ -24,7 +24,7 @@ export default function Footer() {
             <h2 className="font-semibold text-lg bg-black text-white p-2 w-fit mx-auto sm:mx-0">
               Contact
             </h2>
-            <p className="text-md mt-2">20 Charles St, New York, NY 10801</p>
+            <p className="text-md mt-2">20 Charles St, New Rochelle, NY 10801</p>
             <a href="tel:+19292199089" className="block  hover:underline ">
               +1 (929) 219-9089
             </a>

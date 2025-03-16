@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import { Divider } from "antd";
-import logo1 from "../../public/mail-2-svgrepo-com.svg";
+import logo1 from "../../public/email-svgrepo-com.svg";
 import logo2 from "../../public/phone-svgrepo-com.svg";
 import logo3 from "../../public/pin-drop-svgrepo-com.svg";
-import logo4 from "../../public/user-2-svgrepo-com.svg";
+import logo4 from "../../public/user.svg";
 import AOS from "aos";
 import brandLogo from "../../public/logo.svg"
 import "aos/dist/aos.css";
@@ -29,7 +29,7 @@ const contactData = [
     id: 3,
     image: logo3,
     name: "Address",
-    value: "20 Charles St. New York, NY 10801",
+    value: "20 Charles St. New Rochelle, NY 10801",
     link: "https://www.google.com/maps?q=20+Charles+St.+New+York,+NY+10801",
   },
   {

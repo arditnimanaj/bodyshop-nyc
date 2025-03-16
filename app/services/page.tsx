@@ -3,7 +3,7 @@ import SliderComponent from "@/components/Slider";
 import { Divider } from "antd";
 import image1 from "../../public/images/services/body-repair-painting.png";
 import image2 from "../../public/images/services/collision-repair.jpg";
-import image3 from "../../public/images/services/precision-frame.png";
+import image3 from "../../public/images/services/Chassis-Straightening.png";
 import image4 from "../../public/images/services/insurance.png";
 import image5 from "../../public/images/services/paint-correction.jpg";
 import image6 from "../../public/images/services/ceramic-coating.jpg";

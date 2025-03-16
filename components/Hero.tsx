@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
         <div className="text-center mt-[-50px]">
           <Divider orientation="center" style={{ borderColor: "white" }}>
-            <h1 className="text-4xl font-bold text-white font-dancingScript">
+            <h1 className="text-4xl font-bold text-white font-catamaran uppercase">
               Shala
             </h1>
           </Divider>
