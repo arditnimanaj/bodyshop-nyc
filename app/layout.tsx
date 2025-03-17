@@ -53,6 +53,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+      <link rel="icon" href="/logo.svg" sizes="any" />
       <meta name="description" content="Shala Auto Repair Bodyshop is a premium body repair and restoration service that offers top-quality repairs and expert technicians to restore your vehicle's appearance and functionality." />
       <meta name="title" content="Shala Auto Repair Bodyshop" />
       <meta name="google-site-verification" content="8NoeHKk9ic2jlu3Ge_ndjPUUAnzFtfPvNoFrlnEvKvM" />
